@@ -1,0 +1,26 @@
+
+
+<html lang="en">
+  <head>
+    <style>
+    h1 {text-align: center;}
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="background-color:rgba(174, 193, 196, 0.778);">
+    <h1>Please enter your details</h1>
+    &nbsp;
+    <form action = "go" method = "post">
+        {% csrf_token %} 
+         {{ form }}       <!--  'form' is a key to 'InputForm' class which we are using here 
+                         to generate the form -->           
+         <input type="submit" value=Submit" style="background-color: blue; color: white;">
+     </form>
+    &nbsp;
+    <a href="StudentsData">View Students data</a>
+  </body>
+</html>

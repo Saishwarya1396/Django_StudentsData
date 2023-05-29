@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Data</h1>
+    <table>
+        <tr>
+          <th>&nbsp;&nbsp;Name&nbsp;&nbsp;</th>
+          <th>&nbsp;&nbsp;Python&nbsp;&nbsp;</th>
+          <th>&nbsp;&nbsp;Java&nbsp;&nbsp;</th>
+          <th>&nbsp;&nbsp;SQL&nbsp;&nbsp;</th>
+        </tr>
+        {% for row in records %}
+          <tr>
+            <td>{{ row.name }}</td>
+            <td>{{ row.python }}</td>
+            <td>{{ row.java }}</td>
+            <td>{{ row.sql }}</td>
+          </tr>
+        {% endfor %}
+        {% for row in records %}
+          <tr>
+            {% for column in row %}
+              <td><center>{{ column }}</center></td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </table>
+
+      <h3>max paython marks: </h3>
+      {{ records2 }}
+
+      <h3>max java marks: </h3>
+      {{ records3 }}
+
+      <h3>max sql marks: </h3>
+      {{ records4 }}
+
+  </body>
+</html>
